@@ -93,8 +93,13 @@ export default class ImageGallery extends React.Component {
   }
 }
 
+ImageGallery.defaultProps = {
+  isOpen: false,
+}
+
 ImageGallery.propTypes = {
-  imageModalUrl: React.PropTypes.string,
-  isOpen:        React.PropTypes.bool,
-  closeModalFn:  React.PropTypes.func.isRequired,
+  isOpen:       React.PropTypes.bool,
+  showImage:    React.PropTypes.string,
+  gallery:      React.PropTypes.array.isRequired,
+  closeModalFn: React.PropTypes.func.isRequired,
 }
