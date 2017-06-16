@@ -85,7 +85,7 @@ export default class ImageGallery extends React.Component {
           </div>
 
           <figure className="image-gallery__image">
-            <img sizes="100vw" src={this.state.imageUrl} style={{ cursor: 'auto', maxHeight: 'calc(100vh - 90px)'}} />
+            <img src={this.state.imageUrl} />
 
             <div className="image-gallery__footer">
               <figcaption className="image-gallery__footer-caption">{this.state.imageCaption}</figcaption>
