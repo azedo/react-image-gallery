@@ -5,9 +5,11 @@ export default class ImageGallery extends React.Component {
     super(props)
 
     this.state = {
-      imageId: props.showImage,
-      imageUrl: null,
-      imageCaption: null
+      imageId:      props.showImage,
+      imageUrl:     null,
+      imageCaption: null,
+      imageTotal:   null,
+      imageIndex:   null,
     }
   }
 
