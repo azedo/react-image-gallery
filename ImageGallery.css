@@ -22,6 +22,12 @@
   height: 40px;
 }
 
+.image-gallery__count {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85em;
+  align-self: center;
+}
+
 .image-gallery__close {
   background: none;
   border: none;
@@ -97,10 +103,4 @@
 
 .image-gallery__footer-caption {
   flex: 1 1 0;
-}
-
-.image-gallery__footer-count {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.85em;
-  padding-left: 1em;
 }
