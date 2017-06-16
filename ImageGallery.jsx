@@ -87,9 +87,7 @@ export default class ImageGallery extends React.Component {
           <figure className="image-gallery__image">
             <img src={this.state.imageUrl} />
 
-            <div className="image-gallery__footer">
-              <figcaption className="image-gallery__footer-caption">{this.state.imageCaption}</figcaption>
-            </div>
+            <figcaption className="image-gallery__image-caption">{this.state.imageCaption}</figcaption>
           </figure>
         </div>
 
