@@ -11,6 +11,8 @@ export default class ImageGallery extends React.Component {
       imageTotal:   null,
       imageIndex:   null,
     }
+
+    this.onKeyPressed = this.onKeyPressed.bind(this)
   }
 
   componentWillMount() {
@@ -26,6 +28,22 @@ export default class ImageGallery extends React.Component {
       imageTotal: this.props.gallery.length,
       imageIndex: initialIndex
     })
+
+    window.addEventListener("keydown", this.onKeyPressed)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.onKeyPressed)
+  }
+
+  onKeyPressed(e){
+    let { imageIndex } = this.state
+
+    if (e.keyCode == 37) {
+      this.onShowImage(imageIndex, 'previous')
+    } else if (e.keyCode == 39) {
+      this.onShowImage(imageIndex, 'next')
+    }
   }
 
   onShowImage(n, action) {
@@ -34,6 +52,8 @@ export default class ImageGallery extends React.Component {
 
     if (action == 'next') index = n + 1
     if (action == 'previous') index = n - 1
+
+    if (index < 0 || index >= this.state.imageTotal) return false
 
     this.setState({
       imageId: gallery[index].id,
