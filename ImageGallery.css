@@ -55,6 +55,18 @@
   transform: translate(-50%, -50%);
 }
 
+.image-gallery__image {
+  display: table;
+}
+
+.image-gallery__image img {
+  cursor: auto;
+  max-height: calc(100vh - 150px);
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
 .arrow-left {
   background: none;
   border: none;
