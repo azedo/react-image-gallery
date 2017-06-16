@@ -67,6 +67,19 @@
   position: relative;
 }
 
+.image-gallery__image-caption {
+  color: white;
+  cursor: auto;
+  line-height: 1.3;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 5px;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+}
+
 .arrow-left {
   background: none;
   border: none;
@@ -97,8 +110,4 @@
   height: 120px;
   margin-top: -60px;
   width: 40px;
-}
-
-.image-gallery__footer-caption {
-  flex: 1 1 0;
 }
