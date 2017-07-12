@@ -1,6 +1,9 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import _ from 'lodash'
 import ReactModal from 'react-modal'
 
-export default class ImageGallery extends React.Component {
+export default class ImageGallery extends Component {
   constructor(props) {
     super(props)
 
@@ -116,8 +119,8 @@ ImageGallery.defaultProps = {
 }
 
 ImageGallery.propTypes = {
-  isOpen:       React.PropTypes.bool,
-  showImage:    React.PropTypes.string,
-  gallery:      React.PropTypes.array.isRequired,
-  closeModalFn: React.PropTypes.func.isRequired,
+  isOpen:       PropTypes.bool,
+  showImage:    PropTypes.string,
+  gallery:      PropTypes.array.isRequired,
+  closeModalFn: PropTypes.func.isRequired,
 }
