@@ -70,7 +70,7 @@ export default class ImageGallery extends Component {
     return (
       <ReactModal
         isOpen={this.props.isOpen}
-        contentLabel={i18n.interview_requests.caption}
+        contentLabel="Gallery"
         onRequestClose={this.props.closeModalFn}
         className="image-gallery"
         overlayClassName="image-gallery__overlay"
